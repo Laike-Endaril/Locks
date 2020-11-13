@@ -34,19 +34,16 @@ public final class LocksConfig
 		@Config.Name("Generation Chance")
 		@Config.Comment("Chance to generate a random lock on every new chest during world generation. Set to 0 to disable")
 		@Config.RangeDouble(min = 0d, max = 1d)
-		@Config.SlidingOption
 		public double generationChance = 0.75d;
 
 		@Config.Name("Min Generated Lock Length")
 		@Config.Comment("The minimum amount of pins on every generated lock (inclusive)")
 		@Config.RangeInt(min = 1, max = 30)
-		@Config.SlidingOption
 		public int minGeneratedLockLength = 5;
 
 		@Config.Name("Max Generated Lock Length")
 		@Config.Comment("The maximum amount of pins on every generated lock (exclusive)")
 		@Config.RangeInt(min = 1, max = 30)
-		@Config.SlidingOption
 		public int maxGeneratedLockLength = 9;
 
 		public int randLockLen(Random random)
@@ -76,13 +73,11 @@ public final class LocksConfig
 		@Config.Name("Default Lock Length")
 		@Config.Comment("All lock items, which don't have a length nbt value will have this value set as their length. The length of a lock can still be changed by editing its nbt")
 		@Config.RangeInt(min = 1, max = 30)
-		@Config.SlidingOption
 		public int defaultLockLength = 7;
 
 		@Config.Name("Default Lock Pick Strength")
 		@Config.Comment("All lock pick items which don't have a strength nbt value will have this value set as their strength. The strength of a lock pick can still be changed by edition its nbt")
 		@Config.RangeDouble(min = 0d, max = 1d)
-		@Config.SlidingOption
 		public double defaultLockPickStrength = 0.35d;
 
 		@Config.Ignore
